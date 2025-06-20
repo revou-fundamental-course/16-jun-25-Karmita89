@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Segitiga</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <img src="Segitiga.jpg" alt="Header Gambar" class="header-img">
+    <h1>Kalkulator Segitiga</h1>
+
+    <div class="button-group">
+      <button id="btnLuas">Hitung Luas Segitiga</button>
+      <button id="btnKeliling">Hitung Keliling Segitiga</button>
+    </div>
+
+    <form id="formLuas" class="hidden">
+      <h2>Hitung Luas</h2>
+      <label for="alas">Alas (cm):</label>
+      <input type="number" id="alas" required min="0">
+      
+      <label for="tinggi">Tinggi (cm):</label>
+      <input type="number" id="tinggi" required min="0">
+
+      <button type="submit">Hitung Luas</button>
+    </form>
+
+    <form id="formKeliling" class="hidden">
+      <h2>Hitung Keliling</h2>
+      <label for="sisi1">Sisi 1 (cm):</label>
+      <input type="number" id="sisi1" required min="0">
+      
+      <label for="sisi2">Sisi 2 (cm):</label>
+      <input type="number" id="sisi2" required min="0">
+      
+      <label for="sisi3">Sisi 3 (cm):</label>
+      <input type="number" id="sisi3" required min="0">
+
+      <button type="submit">Hitung Keliling</button>
+    </form>
+
+    <div id="hasil" class="hasil hidden">
+      <p id="output"></p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

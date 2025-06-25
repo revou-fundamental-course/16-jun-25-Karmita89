@@ -4,19 +4,23 @@ const formLuas = document.getElementById("formLuas");
 const formKeliling = document.getElementById("formKeliling");
 const hasil = document.getElementById("hasil");
 const output = document.getElementById("output");
+const btnReset = document.getElementById("btnReset");
 
+// Tampilkan form luas
 btnLuas.addEventListener("click", () => {
   formLuas.classList.remove("hidden");
   formKeliling.classList.add("hidden");
   hasil.classList.add("hidden");
 });
 
+// Tampilkan form keliling
 btnKeliling.addEventListener("click", () => {
   formKeliling.classList.remove("hidden");
   formLuas.classList.add("hidden");
   hasil.classList.add("hidden");
 });
 
+// Proses hitung luas
 formLuas.addEventListener("submit", function(e) {
   e.preventDefault();
   const alas = parseFloat(document.getElementById("alas").value);
@@ -31,6 +35,7 @@ formLuas.addEventListener("submit", function(e) {
   }
 });
 
+// Proses hitung keliling
 formKeliling.addEventListener("submit", function(e) {
   e.preventDefault();
   const sisi1 = parseFloat(document.getElementById("sisi1").value);
@@ -44,4 +49,20 @@ formKeliling.addEventListener("submit", function(e) {
   } else {
     alert("Masukkan nilai sisi-sisi yang valid.");
   }
+});
+
+// Tombol reset: kosongkan input dan hapus hasil
+btnReset.addEventListener("click", function () {
+  // Hapus nilai input
+  if (!formLuas.classList.contains("hidden")) {
+    formLuas.reset();
+  }
+
+  if (!formKeliling.classList.contains("hidden")) {
+    formKeliling.reset();
+  }
+
+  // Hapus hasil perhitungan
+  output.textContent = "";
+  hasil.classList.add("hidden");
 });

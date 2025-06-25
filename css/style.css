@@ -11,7 +11,7 @@ body {
   margin: auto;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .header-img {
@@ -24,17 +24,22 @@ body {
 h1, h2 {
   text-align: center;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 label {
   display: block;
   margin-top: 10px;
+  font-weight: bold;
+  color: #340979;
 }
 
 input {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
+  border: none;
+  border-radius: 5px;
   box-sizing: border-box;
 }
 
@@ -43,15 +48,16 @@ button {
   padding: 10px;
   width: 100%;
   background-color: #340979;
-  color: rgb(255, 255, 255);
+  color: white;
   border: none;
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #0c46ba6d;
+  background-color: #5e2ca5;
 }
 
 .button-group {
@@ -67,11 +73,22 @@ button:hover {
 
 .hasil {
   margin-top: 20px;
-  background: #e6f7ff;
+  background: #ffffff;
   padding: 15px;
   border-radius: 8px;
   text-align: center;
   font-weight: bold;
+  color: #340979;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#btnReset {
+  margin-top: 10px;
+  background-color: #4843d6fd;
+}
+
+#btnReset:hover {
+  background-color: #fb534d;
 }
 
 .hidden {
